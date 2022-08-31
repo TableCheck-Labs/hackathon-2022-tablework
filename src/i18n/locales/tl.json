@@ -25,6 +25,9 @@
     "your_name": "Ang pangalan mo",
     "your_email": "Ang email mo",
     "message": "Mensahe",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Araw",
+    "week": "Linggo",
+    "month": "buwan"
   }
 }

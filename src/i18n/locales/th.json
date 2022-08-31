@@ -25,6 +25,9 @@
     "your_name": "ชื่อของคุณ",
     "your_email": "อีเมลของคุณ",
     "message": "ข้อความ",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "วัน",
+    "week": "สัปดาห์",
+    "month": "เดือน"
   }
 }

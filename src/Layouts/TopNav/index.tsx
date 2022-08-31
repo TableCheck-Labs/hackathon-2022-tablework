@@ -5,6 +5,7 @@ import { Button, ButtonAppearance } from '@tablecheck/tablekit-button';
 import { Icon } from '@tablecheck/tablekit-icon';
 import { View } from '@tablecheck/tablekit-language-selector';
 import { LogoSymbol } from '@tablecheck/tablekit-logo';
+import moment from 'moment';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -46,8 +47,9 @@ export function TopNav({
     parts = parts.splice(2);
     const page = `/${locale}/${parts.join('/')}`;
 
-    navigate(page, { replace: true });
     i18next.changeLanguage(locale);
+    moment.locale(locale);
+    navigate(page, { replace: true });
   };
 
   return (

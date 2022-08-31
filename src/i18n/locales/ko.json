@@ -25,6 +25,9 @@
     "your_name": "당신의 이름",
     "your_email": "귀하의 이메일",
     "message": "메시지",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "낮",
+    "week": "주",
+    "month": "월"
   }
 }

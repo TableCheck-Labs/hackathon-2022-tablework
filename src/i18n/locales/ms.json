@@ -25,6 +25,9 @@
     "your_name": "Nama awak",
     "your_email": "Emel anda",
     "message": "Mesej",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Hari",
+    "week": "Minggu",
+    "month": "bulan"
   }
 }

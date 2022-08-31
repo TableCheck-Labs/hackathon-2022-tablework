@@ -25,6 +25,9 @@
     "your_name": "اسمك",
     "your_email": "بريدك الالكتروني",
     "message": "رسالة",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "يوم",
+    "week": "أسبوع",
+    "month": "شهر"
   }
 }

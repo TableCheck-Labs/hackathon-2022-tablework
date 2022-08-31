@@ -25,6 +25,9 @@
     "your_name": "Adınız",
     "your_email": "E-posta adresiniz",
     "message": "İleti",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Gün",
+    "week": "Hafta",
+    "month": "Ay"
   }
 }

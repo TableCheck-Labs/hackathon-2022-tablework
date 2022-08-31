@@ -1,8 +1,29 @@
 import { LocaleCode, ordered as orderedLocales } from '@tablecheck/locales';
 import i18next from 'i18next';
 import LanguageDetector from 'i18next-browser-languagedetector';
+import moment from 'moment';
 import { initReactI18next } from 'react-i18next';
+
 import en from './locales/en.json';
+
+import 'moment/locale/ar';
+import 'moment/locale/de';
+import 'moment/locale/es';
+import 'moment/locale/fr';
+import 'moment/locale/id';
+import 'moment/locale/it';
+import 'moment/locale/ja';
+import 'moment/locale/ko';
+import 'moment/locale/lo';
+import 'moment/locale/ms';
+import 'moment/locale/pt';
+import 'moment/locale/ru';
+import 'moment/locale/th';
+import 'moment/locale/tl-ph';
+import 'moment/locale/tr';
+import 'moment/locale/vi';
+import 'moment/locale/zh-cn';
+import 'moment/locale/zh-tw';
 
 const SUPPORTED_LOCALES = orderedLocales.map(({ code }) => code);
 const DEFAULT_LOCALE = LocaleCode.English;
@@ -22,6 +43,7 @@ i18next
     ) {
       import(`./locales/${language}.json`)
         .then((resources) => {
+          moment.locale(language);
           // eslint-disable-next-line promise/no-callback-in-promise
           callback(null, resources);
         })

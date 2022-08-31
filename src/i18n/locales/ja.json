@@ -25,6 +25,9 @@
     "your_name": "あなたの名前",
     "your_email": "あなたのメール",
     "message": "メッセージ",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "日",
+    "week": "週",
+    "month": "月"
   }
 }

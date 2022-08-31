@@ -25,6 +25,9 @@
     "your_name": "Namamu",
     "your_email": "Email mu",
     "message": "Pesan",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Hari",
+    "week": "Pekan",
+    "month": "Bulan"
   }
 }

@@ -25,6 +25,9 @@
     "your_name": "Your name",
     "your_email": "Your email",
     "message": "Message",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Day",
+    "week": "Week",
+    "month": "Month"
   }
 }

@@ -25,6 +25,9 @@
     "your_name": "Tên của bạn",
     "your_email": "Email của bạn",
     "message": "Thông điệp",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "Ngày",
+    "week": "Tuần",
+    "month": "Tháng"
   }
 }

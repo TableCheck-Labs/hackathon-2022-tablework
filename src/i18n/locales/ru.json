@@ -25,6 +25,9 @@
     "your_name": "Твое имя",
     "your_email": "Ваш адрес электронной почты",
     "message": "Сообщение",
-    "app_name": "TableWork"
+    "app_name": "TableWork",
+    "day": "День",
+    "week": "Неделя",
+    "month": "Месяц"
   }
 }
