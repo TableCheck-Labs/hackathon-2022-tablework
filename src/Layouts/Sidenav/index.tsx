@@ -1,6 +1,4 @@
-import { faObjectGroup } from '@fortawesome/free-regular-svg-icons/faObjectGroup';
 import { faQuestionCircle } from '@fortawesome/free-regular-svg-icons/faQuestionCircle';
-import { faBug } from '@fortawesome/free-solid-svg-icons/faBug';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons/faGlobe';
 import { faTimes } from '@fortawesome/free-solid-svg-icons/faTimes';
 import { ordered } from '@tablecheck/locales';
@@ -71,23 +69,6 @@ export function Sidenav({
           onClick={() => setOpen(false)}
         >
           {t('attributes.links.about')}
-        </Item>
-        <Item
-          as={Link}
-          to={`/${language}/${AppRoute.ReportIssue}`}
-          elemBefore={<Icon icon={faBug} />}
-          onClick={() => setOpen(false)}
-        >
-          {t('attributes.links.report_issue')}
-        </Item>
-        <Item
-          as="a"
-          href="http://tablekit.tablecheck.com/"
-          target="_blank"
-          elemBefore={<Icon icon={faObjectGroup} />}
-          onClick={() => setOpen(false)}
-        >
-          TableKit
         </Item>
         <MobileOnlyItems>
           <Item

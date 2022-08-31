@@ -3,6 +3,5 @@
   "logLevel": "error",
   "publicUri": "/* @echo PUBLIC_URL */",
   "baseName": "",
-  "cdnURL": "/static",
-  "formSpreeId": "replace-me"
+  "cdnURL": "/static"
 }

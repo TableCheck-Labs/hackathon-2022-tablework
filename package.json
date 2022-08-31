@@ -1,5 +1,5 @@
 {
-  "name": "spa-boilerplate",
+  "name": "tablework",
   "license": "MIT",
   "author": "TableCheck Inc.",
   "version": "0.1.0",
@@ -24,8 +24,6 @@
   "dependencies": {
     "@emotion/react": "11.9.3",
     "@emotion/styled": "11.9.3",
-    "@formspree/core": "2.7.0",
-    "@formspree/react": "2.3.0",
     "@fortawesome/free-brands-svg-icons": "5.15.4",
     "@fortawesome/free-regular-svg-icons": "5.15.4",
     "@fortawesome/free-solid-svg-icons": "5.15.4",
@@ -50,6 +48,7 @@
     "history": "5.3.0",
     "i18next": "21.8.14",
     "i18next-browser-languagedetector": "6.1.4",
+    "moment": "2.29.4",
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-helmet": "6.1.0",
