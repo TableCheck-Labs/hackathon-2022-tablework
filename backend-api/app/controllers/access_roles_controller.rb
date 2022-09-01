@@ -12,7 +12,7 @@ class AccessRolesController < ApplicationController
   # GET /access_roles/1
   def show
     @access_role = AccessRole.find(params[:id])
-    render json: @access_role
+    render json: @access_role.to_json(:include => :users)
   end
 
   # POST /access_roles

@@ -45,7 +45,15 @@ namespace :populate do
   desc 'Setup job types'
   task job_types: :environment do
     JobType.create!([{ name: 'Server', code: 'server', id: 1},
-                     { name: 'Dishwasher', code: 'dishwasher', id: 2 }])
+                     { name: 'Dishwasher', code: 'dishwasher', id: 2 },
+                     { name: 'Chief Chef', code: 'chief_chef', id: 3 },
+                     { name: 'Chef', code: 'chef', id: 4 },
+                     { name: 'Bartender', code: 'bartender', id: 5 },
+                     { name: 'Waiter', code: 'waiter', id: 6 },
+                     { name: 'Cashier', code: 'cashier', id: 7 },
+                     { name: 'Janitor', code: 'janitor', id: 8 },
+                     { name: 'Manager', code: 'manager', id: 9 }
+                    ])
   end
 
   desc 'Setup default shop'
