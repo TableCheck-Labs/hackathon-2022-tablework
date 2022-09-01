@@ -31,6 +31,17 @@ path '/shifts' do
         run_test!
         end
     end
+
+    get 'List shifts' do
+        tags 'Shifts'
+        consumes 'application/json'
+
+        response '201', 'Shifts list' do
+        let(:shift) { { id: 1000, name: 'Summer Shift', description: '', user_id: 1000, shop_id: 1000 } }
+        run_test!
+        end
+    end
+
     end
 
     path '/shifts/{id}' do

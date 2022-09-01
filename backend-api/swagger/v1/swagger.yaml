@@ -219,6 +219,13 @@ paths:
               - enddate
               - user_id
               - shop_id
+    get:
+      summary: List shifts
+      tags:
+      - Shifts
+      responses:
+        '201':
+          description: Shifts list
   "/shifts/{id}":
     get:
       summary: Retrieves a shift
