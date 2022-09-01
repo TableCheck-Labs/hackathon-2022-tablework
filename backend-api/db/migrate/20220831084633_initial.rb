@@ -9,6 +9,7 @@ class Initial < ActiveRecord::Migration[7.0]
       t.datetime 'enddate'
       t.integer 'shop_id'
       t.integer 'user_id'
+      t.string 'department'
       t.datetime 'created_at', null: false
       t.datetime 'updated_at', null: false
       t.index ['shop_id'], name: 'index_shifts_on_shop_id'
@@ -35,7 +36,6 @@ class Initial < ActiveRecord::Migration[7.0]
       t.string 'address'
       t.string 'phone'
       t.string 'photo_url'
-      t.string 'department'
       t.datetime 'created_at', null: false
       t.datetime 'updated_at', null: false
       t.integer 'job_type_id'

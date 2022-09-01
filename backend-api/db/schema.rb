@@ -58,6 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.datetime "enddate"
     t.integer "shop_id"
     t.integer "user_id"
+    t.string "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_shifts_on_shop_id"
@@ -78,7 +79,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.string "address"
     t.string "phone"
     t.string "photo_url"
-    t.string "department"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "job_type_id"

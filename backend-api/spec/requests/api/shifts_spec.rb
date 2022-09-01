@@ -11,6 +11,7 @@ path '/shifts' do
         properties: {
             name: { type: :string, },
             description: { type: :string },
+            department: { type: :string },
             startdate: { type: :string },
             enddate: { type: :string },
             user_id: { type: :string },
@@ -45,6 +46,7 @@ path '/shifts' do
                 id: {type: :integer },
                 name: { type: :string, },
                 description: { type: :string },
+                department: { type: :string },
                 startdate: { type: :string },
                 enddate: { type: :string },
                 user_id: { type: :string },

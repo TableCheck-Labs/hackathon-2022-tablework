@@ -203,6 +203,8 @@ paths:
                   type: string
                 description:
                   type: string
+                department:
+                  type: string
                 startdate:
                   type: string
                 enddate:
@@ -242,6 +244,8 @@ paths:
                     type: string
                   description:
                     type: string
+                  department:
+                    type: string
                   startdate:
                     type: string
                   enddate:
@@ -261,6 +265,8 @@ paths:
                   name:
                     type: string
                   description:
+                    type: string
+                  department:
                     type: string
                   startdate:
                     type: string
@@ -404,8 +410,6 @@ paths:
                   type: string
                 photo_url:
                   type: string
-                department:
-                  type: string
                 job_type_id:
                   type: string
                 shop_id:
@@ -451,8 +455,6 @@ paths:
                     type: string
                   photo_url:
                     type: string
-                  department:
-                    type: string
                   job_type_id:
                     type: string
                   shop_id:
@@ -482,8 +484,6 @@ paths:
                   phone:
                     type: string
                   photo_url:
-                    type: string
-                  department:
                     type: string
                   job_type_id:
                     type: string

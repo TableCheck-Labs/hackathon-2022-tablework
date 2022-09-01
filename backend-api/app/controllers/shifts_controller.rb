@@ -50,6 +50,6 @@ class ShiftsController < ApplicationController
   end
 
   def shift_params
-    params.require(:shift).permit(:name, :description, :shop_id, :startdate, :enddate, :user_id)
+    params.require(:shift).permit(:name, :description, :shop_id, :department, :startdate, :enddate, :user_id)
   end
 end
