@@ -1,0 +1,33 @@
+version: "3"
+services:
+  app:
+    build:
+      context: .
+      args:
+        rails_environment: production
+    command: rails server -p 3000 -b '0.0.0.0'
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - "3000:3000"
+    links:
+      - redis
+      - job
+  redis:
+    image: 'redis:6.0-alpine'
+    restart: always
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass tableworkpassword
+    ports:
+      - "6379"
+    volumes:
+      - ./cache_data:/data
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf
+  job:
+    image: 'redis:6.0-alpine'
+    restart: always
+    command: redis-server /usr/local/etc/redis/redis.conf --requirepass tableworkpassword
+    ports:
+      - "6379"
+    volumes:
+      - ./job_data:/data
+      - ./config/redis.conf:/usr/local/etc/redis/redis.conf

@@ -1,0 +1,24 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  timeout: 5000
+  username: postgres
+  host: postgres
+  port: 5432
+
+development:
+  <<: *default
+  username: postgres
+  password: tableworkpassword
+  database: app_development
+
+production:
+  <<: *default
+  database: app_production
+
+test:
+  adapter: sqlite3
+  pool: 5
+  timeout: 5000
+  database: db/test.sqlite3
