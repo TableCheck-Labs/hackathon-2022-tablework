@@ -1,16 +1,24 @@
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import { Spacing } from '@tablecheck/tablekit-theme';
+import { ButtonGroup } from '@tablecheck/tablekit-button-group';
+import { Select } from '@tablecheck/tablekit-select';
+import { BORDER_RADIUS, Spacing } from '@tablecheck/tablekit-theme';
 
 import { PageWrapper } from 'Layouts';
 import { pageTransitionEasing, slideUp } from 'styles';
+
+export const Flex = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: ${Spacing.L4};
+`;
 
 export const HomeWrapper = styled(PageWrapper)`
   max-width: initial;
   animation: ${slideUp} ${pageTransitionEasing} 0.5s;
 `;
 
-export const Selectors = styled.div`
+export const SelectorsWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: ${Spacing.L4};
@@ -30,9 +38,21 @@ export const DateSelector = styled.div`
   align-items: center;
 `;
 
-export const DateSelectorButton = styled(SelectorButton)`
+export const DateSelectorButton = styled(SelectorButton)<{
+  isLeft?: boolean;
+}>`
   border: 1px solid ${({ theme }) => theme.colors.border};
   padding: ${Spacing.L2};
+  ${({ isLeft }) =>
+    isLeft
+      ? css`
+          border-top-left-radius: ${BORDER_RADIUS}px;
+          border-bottom-left-radius: ${BORDER_RADIUS}px;
+        `
+      : css`
+          border-top-right-radius: ${BORDER_RADIUS}px;
+          border-bottom-right-radius: ${BORDER_RADIUS}px;
+        `};
 `;
 
 export const DateSelectorInfo = styled.div`
@@ -46,6 +66,8 @@ export const TableWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: none;
   margin-top: ${Spacing.L4};
+  border-radius: 8px;
+  overflow: hidden;
 `;
 
 export const TableHeader = styled.div`
@@ -59,7 +81,9 @@ export const TableRow = styled.div`
   justify-content: space-between;
 `;
 
-export const Cell = styled.div`
+export const Cell = styled.div<{
+  color?: string;
+}>`
   display: flex;
   flex-direction: column;
   width: calc(100% / 7);
@@ -68,18 +92,26 @@ export const Cell = styled.div`
   padding: ${Spacing.L2} 0;
   border-right: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
+  ${({ color }) => `background-color: ${color}`};
 
   &:last-child {
     border-right: none;
   }
 `;
 
-export const ViewSelector = styled.div`
-  border: 1px solid ${({ theme }) => theme.colors.border};
-  display: flex;
+export const SelectorSelect = styled(Select)`
+  min-width: 180px;
+  height: 42px;
 `;
 
-export const ViewButton = styled(SelectorButton)<{
+export const VenueSelector = styled(Select)``;
+export const ViewSelector = styled(Select)``;
+
+export const PeriodSelector = styled(ButtonGroup)`
+  width: auto;
+`;
+
+export const PeriodButton = styled(SelectorButton)<{
   active?: boolean;
 }>`
   padding: 0 ${Spacing.L4};
@@ -89,6 +121,10 @@ export const ViewButton = styled(SelectorButton)<{
     css`
       background-color: ${theme.colors.primary};
       color: white;
+
+      &:hover {
+        background-color: ${theme.colors.primary};
+      }
     `};
 
   &:last-child {

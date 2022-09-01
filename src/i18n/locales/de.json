@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Tag",
     "week": "Woche",
-    "month": "Monat"
+    "month": "Monat",
+    "shift_view": "Ansicht verschieben",
+    "employee_view": "Mitarbeiteransicht"
   }
 }
