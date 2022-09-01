@@ -11,6 +11,13 @@ Bundler.require(*Rails.groups)
 module Tablework
   class Application < Rails::Application
     config.api_only = true
+    config.hosts = [
+      IPAddr.new("0.0.0.0/0"),
+      IPAddr.new("::/0"),
+      "localhost",
+      "tablework.vectorsigma.ru"
+      ENV["RAILS_DEVELOPMENT_HOSTS"]
+    ]
     config.load_defaults 7.0
     config.autoload_paths += %W[#{config.root}/lib] # autoload modules
     config.i18n.default_locale = :en
