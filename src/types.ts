@@ -1,6 +1,11 @@
+export enum Mode {
+  Admin = 'admin',
+  User = 'user'
+}
+
 export enum View {
-  Employees = 'employees',
-  Shift = 'shift'
+  Shifts = 'shifts',
+  Staff = 'staff'
 }
 
 export enum Period {

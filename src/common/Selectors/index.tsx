@@ -31,11 +31,11 @@ export function Selectors({
   const { isAdmin } = React.useContext(AppContext);
   const venueOptions = [{ label: 'My Restaurant', value: 'my-restaurant' }];
   const viewOptions = [
-    { label: t('keywords.shift_view'), value: View.Shift },
     {
-      label: t('keywords.employee_view'),
-      value: View.Employees
-    }
+      label: t('keywords.staff_view'),
+      value: View.Staff
+    },
+    { label: t('keywords.shifts_view'), value: View.Shifts }
   ];
   const periods = [
     {

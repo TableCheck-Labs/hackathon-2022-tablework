@@ -1,16 +1,17 @@
 import moment, { Moment } from 'moment';
 import * as React from 'react';
 
-import { employeeData as data } from './data';
-import { Avatar, Cell, StaffCell, TableRow } from './styles';
+import { Avatar, Cell, StaffCell, TableRow } from '../../styles';
 
-export function Employees({ days }: { days: Moment[] }): JSX.Element {
+import { data } from './data';
+
+export function AdminStaffView({ days }: { days: Moment[] }): JSX.Element {
   return (
     <>
       {data.map((staff) => (
         <TableRow key={staff.id}>
           <StaffCell>
-            <Avatar name={staff.name} />
+            <Avatar url={staff.photo} />
             {staff.name}
           </StaffCell>
           {days.map((day) => {

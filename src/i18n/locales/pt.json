@@ -29,7 +29,9 @@
     "day": "Dia",
     "week": "Semana",
     "month": "Mês",
-    "shift_view": "Mudança de Visualização",
-    "employee_view": "Visualização do funcionário"
+    "staff_view": "Visualização da equipe",
+    "shifts_view": "Visualização de turnos",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

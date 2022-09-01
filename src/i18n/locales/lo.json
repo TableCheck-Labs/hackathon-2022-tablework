@@ -29,7 +29,9 @@
     "day": "ມື້",
     "week": "ອາທິດ",
     "month": "ເດືອນ",
-    "shift_view": "Shift View",
-    "employee_view": "ທັດສະນະຂອງພະນັກງານ"
+    "staff_view": "ທັດສະນະພະນັກງານ",
+    "shifts_view": "Shift View",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

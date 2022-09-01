@@ -45,12 +45,16 @@ export const StaffCell = styled(Cell)`
 `;
 
 export const Avatar = styled.div<{
-  name: string;
+  url: string;
 }>`
   border-radius: 100%;
-  background-image: ${({ name }) => `url('https://i.pravatar.cc/80?${name}')`};
+  background-image: ${({ url }) => `url('${url}')`};
   background-size: cover;
   width: 40px;
   height: 40px;
-  margin-right: ${Spacing.L4};
+  margin: 0 ${Spacing.L4};
+`;
+
+export const AvatarWrapper = styled.div`
+  display: flex;
 `;

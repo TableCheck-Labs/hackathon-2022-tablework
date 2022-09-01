@@ -1,7 +1,8 @@
-export const employeeData = [
+export const data = [
   {
     id: '324ion234fwe',
     name: 'Pablo Diaz',
+    photo: 'https://i.pravatar.cc/80?pablo',
     slots: [
       {
         jobType: 'server',
@@ -20,6 +21,7 @@ export const employeeData = [
   {
     id: 'ewfwepo4kpm',
     name: 'Manuel Perez',
+    photo: 'https://i.pravatar.cc/80?manuel',
     slots: [
       {
         jobType: 'dishwasher',
@@ -36,31 +38,3 @@ export const employeeData = [
     ]
   }
 ];
-
-export const shiftsData = {
-  id: 2,
-  name: 'Pablo Diaz',
-  email: 'ispablo.realperson@example.com',
-  address: null,
-  phone: '0123-0102031',
-  photo_url: null,
-  department: 'Servitors',
-  created_at: '2022-09-01T14:52:01.215+09:00',
-  updated_at: '2022-09-01T14:52:01.215+09:00',
-  job_type_id: 1,
-  shop_id: 1,
-  access_role_id: 3,
-  shifts: [
-    {
-      id: 1,
-      name: 'some shift',
-      description: 'shift desc',
-      startdate: '2022-08-31T22:33:16.791+09:00',
-      enddate: '2022-09-02T22:33:16.791+09:00',
-      shop_id: 1,
-      user_id: 2,
-      created_at: '2022-09-01T15:34:01.588+09:00',
-      updated_at: '2022-09-01T15:34:01.588+09:00'
-    }
-  ]
-};

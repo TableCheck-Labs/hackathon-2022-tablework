@@ -29,7 +29,9 @@
     "day": "日",
     "week": "週",
     "month": "月",
-    "shift_view": "シフト ビュー",
-    "employee_view": "従業員ビュー"
+    "staff_view": "スタッフ ビュー",
+    "shifts_view": "シフト ビュー",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

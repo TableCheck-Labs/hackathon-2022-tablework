@@ -29,7 +29,9 @@
     "day": "Ngày",
     "week": "Tuần",
     "month": "Tháng",
-    "shift_view": "Shift View",
-    "employee_view": "Chế độ xem nhân viên"
+    "staff_view": "Xem nhân viên",
+    "shifts_view": "Chế độ xem thay đổi",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

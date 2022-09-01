@@ -29,7 +29,9 @@
     "day": "Gün",
     "week": "Hafta",
     "month": "Ay",
-    "shift_view": "Vardiya Görünümü",
-    "employee_view": "Çalışan Görünümü"
+    "staff_view": "Personel Görünümü",
+    "shifts_view": "Vardiya Görünümü",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

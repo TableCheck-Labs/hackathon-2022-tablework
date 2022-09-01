@@ -29,7 +29,9 @@
     "day": "Araw",
     "week": "Linggo",
     "month": "buwan",
-    "shift_view": "Shift View",
-    "employee_view": "View ng Empleyado"
+    "staff_view": "View ng Staff",
+    "shifts_view": "Paglipat ng View",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

@@ -29,7 +29,9 @@
     "day": "يوم",
     "week": "أسبوع",
     "month": "شهر",
-    "shift_view": "عرض التحول",
-    "employee_view": "عرض الموظف"
+    "staff_view": "عرض الموظفين",
+    "shifts_view": "عرض التحولات",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

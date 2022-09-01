@@ -47,7 +47,7 @@ export function Home(): JSX.Element {
                 fill="#2f2e41"
               />
             </svg>
-            <div>Staff login</div>
+            <div>User mode</div>
           </UserButton>
         </Link>
 
@@ -117,7 +117,7 @@ export function Home(): JSX.Element {
                 fill="#d0cde1"
               />
             </svg>
-            <div>Admin/Manager login</div>
+            <div>Admin mode</div>
           </UserButton>
         </Link>
       </HomeWrapper>

@@ -29,7 +29,9 @@
     "day": "낮",
     "week": "주",
     "month": "월",
-    "shift_view": "시프트 뷰",
-    "employee_view": "직원 보기"
+    "staff_view": "직원보기",
+    "shifts_view": "교대보기",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

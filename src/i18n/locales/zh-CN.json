@@ -29,7 +29,9 @@
     "day": "天",
     "week": "星期",
     "month": "月",
-    "shift_view": "换档视图",
-    "employee_view": "员工视图"
+    "staff_view": "员工观点",
+    "shifts_view": "班次视图",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

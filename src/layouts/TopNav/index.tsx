@@ -63,9 +63,7 @@ export function TopNav({
             <LogoSymbol size="24px" />
             <LogoWording>{t('keywords.app_name')}</LogoWording>
           </LogoWrapper>
-          <LogoWording>
-            &gt; {isAdmin ? 'Admin/Manager View' : 'Staff View'}
-          </LogoWording>
+          <LogoWording>&gt; {isAdmin ? 'Admin mode' : 'User mode'}</LogoWording>
         </LogoFlex>
         <div style={{ display: 'flex' }}>
           <DesktopOnlyItems>

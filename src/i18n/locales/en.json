@@ -29,7 +29,9 @@
     "day": "Day",
     "week": "Week",
     "month": "Month",
-    "shift_view": "Shift View",
-    "employee_view": "Employee View"
+    "staff_view": "Staff View",
+    "shifts_view": "Shifts View",
+    "user_mode": "User Mode",
+    "admin_mode": "Admin Mode"
   }
 }

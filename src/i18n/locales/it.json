@@ -29,7 +29,9 @@
     "day": "Giorno",
     "week": "Settimana",
     "month": "Mese",
-    "shift_view": "Vista a turni",
-    "employee_view": "Vista dei dipendenti"
+    "staff_view": "Vista personale",
+    "shifts_view": "Vista turni",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

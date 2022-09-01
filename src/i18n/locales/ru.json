@@ -29,7 +29,9 @@
     "day": "День",
     "week": "Неделя",
     "month": "Месяц",
-    "shift_view": "Сдвиг вида",
-    "employee_view": "Представление сотрудника"
+    "staff_view": "Вид персонала",
+    "shifts_view": "Сдвиги просмотра",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }
