@@ -4,7 +4,7 @@ import { Spacing } from '@tablecheck/tablekit-theme';
 import { getLinkStyles } from '@tablecheck/tablekit-typography';
 import { Link } from 'react-router-dom';
 
-import { BREAKPOINTS, GRID_MARGIN, TOPNAV_HEIGHT } from 'Layouts';
+import { BREAKPOINTS, GRID_MARGIN, TOPNAV_HEIGHT } from 'layouts';
 
 export const FooterWrapper = styled.div`
   border-top: 1px solid ${({ theme }) => theme.colors.border};

@@ -5,16 +5,18 @@ import { Moment } from 'moment';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
+import { AppContext } from 'contexts/AppContext';
+import { Flex } from 'layouts';
+import { Period, View } from 'types';
+
 import {
   DateSelector,
   DateSelectorButton,
   DateSelectorInfo,
-  Flex,
   PeriodSelector,
   SelectorSelect,
   SelectorsWrapper
 } from './styles';
-import { Period, View } from './types';
 
 export function Selectors({
   currentDate,
@@ -26,6 +28,7 @@ export function Selectors({
   setView: (view: View) => void;
 }): JSX.Element {
   const [t] = useTranslation();
+  const { isAdmin } = React.useContext(AppContext);
   const venueOptions = [{ label: 'My Restaurant', value: 'my-restaurant' }];
   const viewOptions = [
     { label: t('keywords.shift_view'), value: View.Shift },
@@ -51,14 +54,16 @@ export function Selectors({
   return (
     <SelectorsWrapper>
       <Flex>
-        <SelectorSelect
-          name="venue-select"
-          shouldFitContainer
-          onChange={() => {}}
-          options={venueOptions}
-          value={venueOptions[0]}
-          isRequired
-        />
+        {isAdmin && (
+          <SelectorSelect
+            name="venue-select"
+            shouldFitContainer
+            onChange={() => {}}
+            options={venueOptions}
+            value={venueOptions[0]}
+            isRequired
+          />
+        )}
         <DateSelector>
           <DateSelectorButton
             isLeft
@@ -79,14 +84,16 @@ export function Selectors({
             <Icon icon={faChevronRight} />
           </DateSelectorButton>
         </DateSelector>
-        <SelectorSelect
-          name="view-select"
-          shouldFitContainer
-          onChange={(option) => setView(option?.value as View)}
-          options={viewOptions}
-          defaultValue={viewOptions[0]}
-          isRequired
-        />
+        {isAdmin && (
+          <SelectorSelect
+            name="view-select"
+            shouldFitContainer
+            onChange={(option) => setView(option?.value as View)}
+            options={viewOptions}
+            defaultValue={viewOptions[0]}
+            isRequired
+          />
+        )}
       </Flex>
       <PeriodSelector
         isValueRequired

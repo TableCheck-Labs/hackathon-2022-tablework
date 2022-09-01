@@ -1,8 +1,8 @@
 import { Link as TKLink } from '@tablecheck/tablekit-typography';
 import { Helmet } from 'react-helmet';
-import { useTranslation, Trans } from 'react-i18next';
+import { Trans, useTranslation } from 'react-i18next';
 
-import { PageWrapper, PageContent, Headline, PageImage } from 'Layouts';
+import { Headline, PageContent, PageImage, PageWrapper } from 'layouts';
 
 export function About(): JSX.Element {
   const [t, { language }] = useTranslation();

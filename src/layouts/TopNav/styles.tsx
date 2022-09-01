@@ -4,7 +4,7 @@ import { LanguageSelector as TKLanguageSelector } from '@tablecheck/tablekit-lan
 import { Spacing } from '@tablecheck/tablekit-theme';
 import { Link } from 'react-router-dom';
 
-import { BREAKPOINTS, GRID_MARGIN, TOPNAV_HEIGHT } from 'Layouts';
+import { BREAKPOINTS, GRID_MARGIN, TOPNAV_HEIGHT } from 'layouts';
 
 export const TopNavWrapper = styled.div`
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
@@ -45,11 +45,16 @@ export const LogoWrapper = styled(Link)`
   text-decoration: none;
 `;
 
+export const LogoFlex = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
 export const LogoWording = styled.span`
   color: ${({ theme }) => theme.colors.text};
-  margin-left: ${Spacing.L2};
   font-size: 20px;
   font-weight: 500;
+  margin-left: ${Spacing.L2};
 `;
 
 export const MenuButton = styled(Button)`
