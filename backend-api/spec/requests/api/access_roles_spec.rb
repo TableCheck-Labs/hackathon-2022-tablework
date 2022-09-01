@@ -14,7 +14,7 @@ path '/access_roles' do
             rid: { type: :string, },
             user_ids: { type: :array, items: { type: :integer } }
         },
-        required: [ 'id', 'name', 'rid' ]
+        required: [ 'name', 'rid' ]
         }
 
         response '201', 'Access Role created' do

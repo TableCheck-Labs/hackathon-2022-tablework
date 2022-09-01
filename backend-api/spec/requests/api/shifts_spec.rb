@@ -18,7 +18,7 @@ path '/shifts' do
             shop_id: { type: :string } 
         },
 
-        required: [ 'id', 'name', 'startdate', 'enddate', 'user_id', 'shop_id' ]
+        required: [ 'name', 'startdate', 'enddate', 'user_id', 'shop_id' ]
         }
 
         response '201', 'Shift created' do

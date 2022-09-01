@@ -15,7 +15,7 @@ path '/shops' do
             user_ids: { type: :array, items: { type: :integer } }
         },
 
-        required: [ 'id', 'name' ]
+        required: [ 'name' ]
         }
 
         response '201', 'Shop created' do

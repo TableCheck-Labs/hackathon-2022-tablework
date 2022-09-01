@@ -21,7 +21,7 @@ path '/users' do
             access_role_id: { type: :integer },
             shift_ids: { type: :array, items: { type: :integer } }
         },
-        required: [ 'id', 'name', 'email', 'access_role_id' ]
+        required: [ 'name', 'email', 'access_role_id' ]
         }
 
         response '201', 'User created' do

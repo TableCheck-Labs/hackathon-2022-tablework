@@ -16,7 +16,7 @@ path '/job_types' do
             dark_color: { type: :string },
             user_ids: { type: :array, items: { type: :integer } }
         },
-        required: [ 'id', 'name', 'code' ]
+        required: [ 'name', 'code' ]
         }
 
         response '201', 'Job type created' do
