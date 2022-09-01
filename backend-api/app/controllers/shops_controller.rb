@@ -12,7 +12,7 @@ class ShopsController < ApplicationController
   # GET /shops/1
   def show
     @shop = Shop.find(params[:id])
-    render json: @shop
+    render json: @shop.to_json(:include => :shifts)
   end
 
   # POST /shops

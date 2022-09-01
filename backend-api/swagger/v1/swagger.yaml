@@ -6,7 +6,7 @@ info:
 paths:
   "/access_roles":
     post:
-      summary: Creates a access_role
+      summary: Creates an access_role
       tags:
       - AccessRoles
       parameters: []
@@ -39,7 +39,7 @@ paths:
     get:
       summary: Retrieves an access role
       tags:
-      - AccessRole
+      - AccessRoles
       parameters:
       - name: id
         in: path
@@ -88,6 +88,104 @@ paths:
                 - id
         '404':
           description: access role not found
+        '406':
+          description: unsupported accept header
+  "/job_types":
+    post:
+      summary: Creates a job type
+      tags:
+      - JobTypes
+      parameters: []
+      responses:
+        '201':
+          description: Job type created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                code:
+                  type: string
+                light_color:
+                  type: string
+                dark_color:
+                  type: string
+                user_ids:
+                  type: array
+                  items:
+                    type: integer
+              required:
+              - id
+              - name
+              - code
+  "/job_types/{id}":
+    get:
+      summary: Retrieves a job type
+      tags:
+      - JobTypes
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: job type found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  code:
+                    type: string
+                  light_color:
+                    type: string
+                  dark_color:
+                    type: string
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  code:
+                    type: string
+                  light_color:
+                    type: string
+                  dark_color:
+                    type: string
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+        '404':
+          description: job type not found
         '406':
           description: unsupported accept header
   "/users":
