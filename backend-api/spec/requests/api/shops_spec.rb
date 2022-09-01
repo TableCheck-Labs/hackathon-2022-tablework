@@ -9,7 +9,6 @@ path '/shops' do
         parameter name: :shop, in: :body, schema: {
         type: :object,
         properties: {
-            id: {type: :integer },
             name: { type: :string, },
             description: { type: :string },
             user_ids: { type: :array, items: { type: :integer } }

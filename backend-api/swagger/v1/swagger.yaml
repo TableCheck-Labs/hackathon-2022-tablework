@@ -21,8 +21,6 @@ paths:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 name:
                   type: string
                 rid:
@@ -106,8 +104,6 @@ paths:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 name:
                   type: string
                 code:
@@ -203,8 +199,6 @@ paths:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 name:
                   type: string
                 description:
@@ -299,8 +293,6 @@ paths:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 name:
                   type: string
                 description:
@@ -395,8 +387,6 @@ paths:
             schema:
               type: object
               properties:
-                id:
-                  type: integer
                 name:
                   type: string
                 email:

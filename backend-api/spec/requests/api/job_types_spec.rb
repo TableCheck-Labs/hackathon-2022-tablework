@@ -9,7 +9,6 @@ path '/job_types' do
         parameter name: :job_type, in: :body, schema: {
         type: :object,
         properties: {
-            id: {type: :integer },
             name: { type: :string },
             code: { type: :string },
             light_color: { type: :string },

@@ -9,7 +9,6 @@ path '/access_roles' do
         parameter name: :access_role, in: :body, schema: {
         type: :object,
         properties: {
-            id: {type: :integer },
             name: { type: :string, },
             rid: { type: :string, },
             user_ids: { type: :array, items: { type: :integer } }

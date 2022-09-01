@@ -9,7 +9,6 @@ path '/shifts' do
         parameter name: :shift, in: :body, schema: {
         type: :object,
         properties: {
-            id: {type: :integer },
             name: { type: :string, },
             description: { type: :string },
             startdate: { type: :string },
