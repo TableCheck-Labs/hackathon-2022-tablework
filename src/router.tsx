@@ -1,14 +1,12 @@
-import { ordered as orderedLocales } from '@tablecheck/locales';
 import { useTranslation } from 'react-i18next';
 import { Navigate, Route, Routes } from 'react-router-dom';
 
-import { About } from 'Pages/About';
-import { Home } from 'Pages/Home';
 import { AppRoute } from 'enums';
+import { About } from 'pages/About';
+import { Home } from 'pages/Home';
+import { Venue } from 'pages/Venue';
 
-import { PageLayout } from './Layouts/Page';
-
-export const SUPPORTED_LOCALES = orderedLocales.map(({ code }) => code);
+import { PageLayout } from './layouts/Page';
 
 export function Router({
   isDarkMode,
@@ -31,6 +29,8 @@ export function Router({
         }
       >
         <Route index element={<Home />} />
+        <Route path={AppRoute.MySchedule} element={<Venue />} />
+        <Route path={`${AppRoute.Venue}/:slug`} element={<Venue />} />
         <Route path={AppRoute.About} element={<About />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${language}`} replace />} />

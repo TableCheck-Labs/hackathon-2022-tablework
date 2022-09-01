@@ -1,3 +1,5 @@
 export enum AppRoute {
-  About = 'about'
+  About = 'about',
+  MySchedule = 'my-schedule',
+  Venue = 'venue'
 }

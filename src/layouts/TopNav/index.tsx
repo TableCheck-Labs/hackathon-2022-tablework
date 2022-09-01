@@ -11,6 +11,7 @@ import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { tciSun } from 'tablecheck-icons/tciSun';
 
+import { AppContext } from 'contexts/AppContext';
 import { getI18nextInstance } from 'i18n';
 
 import { Sidenav } from '../Sidenav';
@@ -19,6 +20,7 @@ import {
   DesktopOnlyItems,
   LangSelectorButton,
   LanguageSelectorWrapper,
+  LogoFlex,
   LogoWording,
   LogoWrapper,
   MenuButton,
@@ -33,6 +35,7 @@ export function TopNav({
   isDarkMode: boolean;
   setDarkMode: (value: boolean) => void;
 }): JSX.Element | null {
+  const { isAdmin } = React.useContext(AppContext);
   const [isMenuOpen, setMenuOpen] = React.useState(false);
   const i18next = getI18nextInstance();
   const navigate = useNavigate();
@@ -55,10 +58,15 @@ export function TopNav({
   return (
     <TopNavWrapper>
       <TopNavContent>
-        <LogoWrapper to={`/${language}`}>
-          <LogoSymbol size="24px" />
-          <LogoWording>{t('keywords.app_name')}</LogoWording>
-        </LogoWrapper>
+        <LogoFlex>
+          <LogoWrapper to={`/${language}`}>
+            <LogoSymbol size="24px" />
+            <LogoWording>{t('keywords.app_name')}</LogoWording>
+          </LogoWrapper>
+          <LogoWording>
+            &gt; {isAdmin ? 'Admin/Manager View' : 'Staff View'}
+          </LogoWording>
+        </LogoFlex>
         <div style={{ display: 'flex' }}>
           <DesktopOnlyItems>
             <Button

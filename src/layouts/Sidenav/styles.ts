@@ -4,7 +4,7 @@ import { ItemGroup } from '@tablecheck/tablekit-item';
 import { Panel } from '@tablecheck/tablekit-panel';
 import { Spacing } from '@tablecheck/tablekit-theme';
 
-import { BREAKPOINTS, GRID_MARGIN } from 'Layouts';
+import { BREAKPOINTS, GRID_MARGIN } from 'layouts';
 
 export const SidenavWrapper = styled(Panel)`
   padding: ${GRID_MARGIN};

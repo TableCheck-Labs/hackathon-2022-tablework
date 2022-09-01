@@ -38,12 +38,18 @@ export const employeeData = [
 ];
 
 export const shiftsData = {
-  id: 1,
-  name: 'Plastic Noodles',
-  description: 'Popular local restaraunt serving tender and chewy noodles',
-  created_at: '2022-09-01T14:52:01.229+09:00',
-  updated_at: '2022-09-01T14:52:01.229+09:00',
-  shifts_count: 1,
+  id: 2,
+  name: 'Pablo Diaz',
+  email: 'ispablo.realperson@example.com',
+  address: null,
+  phone: '0123-0102031',
+  photo_url: null,
+  department: 'Servitors',
+  created_at: '2022-09-01T14:52:01.215+09:00',
+  updated_at: '2022-09-01T14:52:01.215+09:00',
+  job_type_id: 1,
+  shop_id: 1,
+  access_role_id: 3,
   shifts: [
     {
       id: 1,

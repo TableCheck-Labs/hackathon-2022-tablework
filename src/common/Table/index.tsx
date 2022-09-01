@@ -1,16 +1,20 @@
-import moment, {Moment} from 'moment';
+import moment, { Moment } from 'moment';
 import * as React from 'react';
-import {Helmet} from 'react-helmet';
-import {useTranslation} from 'react-i18next';
+import { Helmet } from 'react-helmet';
+import { useTranslation } from 'react-i18next';
 
-import {Employees} from './Employees';
-import {Selectors} from './Selectors';
-import {Shifts} from './Shifts';
-import {Cell, HomeWrapper, TableHeader, TableWrapper} from './styles';
-import {View} from './types';
+import { AppContext } from 'contexts/AppContext';
+import { View } from 'types';
 
-export function Home(): JSX.Element {
-  const [t, {language}] = useTranslation();
+import { Selectors } from '../Selectors';
+
+import { Employees } from './Employees';
+import { Shifts } from './Shifts';
+import { Cell, TableHeader, TableWrapper } from './styles';
+
+export function Table(): JSX.Element {
+  const { isAdmin } = React.useContext(AppContext);
+  const [t, { language }] = useTranslation();
   const [currentDate, setCurrentDate] = React.useState(moment());
   const [view, setView] = React.useState(View.Shift);
   const [days, setDays] = React.useState<Moment[]>([]);
@@ -30,7 +34,7 @@ export function Home(): JSX.Element {
   }, [language]);
 
   return (
-    <HomeWrapper>
+    <>
       <Selectors
         currentDate={currentDate}
         setCurrentDate={setCurrentDate}
@@ -38,15 +42,15 @@ export function Home(): JSX.Element {
       />
       <TableWrapper>
         <TableHeader>
-          <Cell/>
+          <Cell />
           {days.map((day) => (
             <Cell key={day.format('YYYY-MM-DD')}>{day.format('ddd D')}</Cell>
           ))}
         </TableHeader>
         {view === View.Employees ? (
-          <Employees days={days}/>
+          <Employees days={days} />
         ) : (
-          <Shifts days={days}/>
+          <Shifts days={days} />
         )}
       </TableWrapper>
       <Helmet>
@@ -54,6 +58,6 @@ export function Home(): JSX.Element {
           'keywords.app_name'
         )}`}</title>
       </Helmet>
-    </HomeWrapper>
+    </>
   );
 }

@@ -1,12 +1,8 @@
 import styled from '@emotion/styled';
 import { Spacing } from '@tablecheck/tablekit-theme';
-import {
-  getLinkStyles,
-  TypographyHeadlineDesktop
-} from '@tablecheck/tablekit-typography';
-import { Link } from 'react-router-dom';
+import { TypographyHeadlineDesktop } from '@tablecheck/tablekit-typography';
 
-import { fadeIn, pageTransitionEasing } from 'styles';
+import { fadeIn, pageTransitionEasing, slideUp } from 'styles';
 
 export const GRID_MARGIN = Spacing.L4;
 export const GRID_DESKTOP_MAX_WIDTH = '74em';
@@ -39,6 +35,11 @@ export const PageWrapper = styled.div`
   animation: ${fadeIn} ${pageTransitionEasing} 0.5s;
 `;
 
+export const FullPageWrapper = styled(PageWrapper)`
+  max-width: initial;
+  animation: ${slideUp} ${pageTransitionEasing} 0.5s;
+`;
+
 export const PageContent = styled.div`
   display: flex;
   flex-direction: column;
@@ -69,6 +70,16 @@ export const PageImage = styled.img`
   }
 `;
 
-export const PageLink = styled(Link)`
-  ${getLinkStyles};
+export const Flex = styled.div`
+  display: flex;
+  align-items: center;
+
+  > * {
+    margin-right: ${Spacing.L4};
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
 `;
