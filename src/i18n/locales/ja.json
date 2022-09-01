@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "日",
     "week": "週",
-    "month": "月"
+    "month": "月",
+    "shift_view": "シフト ビュー",
+    "employee_view": "従業員ビュー"
   }
 }

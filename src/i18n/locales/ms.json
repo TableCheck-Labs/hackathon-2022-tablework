@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Hari",
     "week": "Minggu",
-    "month": "bulan"
+    "month": "bulan",
+    "shift_view": "Shift View",
+    "employee_view": "Pandangan Pekerja"
   }
 }

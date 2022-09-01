@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "ມື້",
     "week": "ອາທິດ",
-    "month": "ເດືອນ"
+    "month": "ເດືອນ",
+    "shift_view": "Shift View",
+    "employee_view": "ທັດສະນະຂອງພະນັກງານ"
   }
 }

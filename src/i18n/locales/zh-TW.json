@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "天",
     "week": "星期",
-    "month": "月"
+    "month": "月",
+    "shift_view": "換檔視圖",
+    "employee_view": "員工視圖"
   }
 }

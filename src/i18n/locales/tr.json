@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Gün",
     "week": "Hafta",
-    "month": "Ay"
+    "month": "Ay",
+    "shift_view": "Vardiya Görünümü",
+    "employee_view": "Çalışan Görünümü"
   }
 }

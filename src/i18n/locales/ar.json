@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "يوم",
     "week": "أسبوع",
-    "month": "شهر"
+    "month": "شهر",
+    "shift_view": "عرض التحول",
+    "employee_view": "عرض الموظف"
   }
 }

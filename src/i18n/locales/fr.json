@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Jour",
     "week": "La semaine",
-    "month": "Mois"
+    "month": "Mois",
+    "shift_view": "Décaler la vue",
+    "employee_view": "Vue Employé"
   }
 }

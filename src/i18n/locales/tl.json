@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Araw",
     "week": "Linggo",
-    "month": "buwan"
+    "month": "buwan",
+    "shift_view": "Shift View",
+    "employee_view": "View ng Empleyado"
   }
 }

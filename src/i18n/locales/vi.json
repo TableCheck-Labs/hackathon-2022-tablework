@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Ngày",
     "week": "Tuần",
-    "month": "Tháng"
+    "month": "Tháng",
+    "shift_view": "Shift View",
+    "employee_view": "Chế độ xem nhân viên"
   }
 }

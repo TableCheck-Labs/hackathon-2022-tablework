@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "День",
     "week": "Неделя",
-    "month": "Месяц"
+    "month": "Месяц",
+    "shift_view": "Сдвиг вида",
+    "employee_view": "Представление сотрудника"
   }
 }

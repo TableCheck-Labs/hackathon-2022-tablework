@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "낮",
     "week": "주",
-    "month": "월"
+    "month": "월",
+    "shift_view": "시프트 뷰",
+    "employee_view": "직원 보기"
   }
 }

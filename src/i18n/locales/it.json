@@ -28,6 +28,8 @@
     "app_name": "TableWork",
     "day": "Giorno",
     "week": "Settimana",
-    "month": "Mese"
+    "month": "Mese",
+    "shift_view": "Vista a turni",
+    "employee_view": "Vista dei dipendenti"
   }
 }
