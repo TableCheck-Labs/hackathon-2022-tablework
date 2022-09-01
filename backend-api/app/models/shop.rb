@@ -7,9 +7,4 @@ class Shop < ApplicationRecord
 
   has_many :shifts
   has_many :users
-
-  # get how many shifts were scheduled
-  def scheduled
-    Shift.where("shop_id = '#{id}'").count
-  end
 end

@@ -188,6 +188,200 @@ paths:
           description: job type not found
         '406':
           description: unsupported accept header
+  "/shifts":
+    post:
+      summary: Creates a shift
+      tags:
+      - Shifts
+      parameters: []
+      responses:
+        '201':
+          description: Shift created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                description:
+                  type: string
+                startdate:
+                  type: string
+                enddate:
+                  type: string
+                user_id:
+                  type: string
+                shop_id:
+                  type: string
+              required:
+              - id
+              - name
+              - startdate
+              - enddate
+              - user_id
+              - shop_id
+  "/shifts/{id}":
+    get:
+      summary: Retrieves a shift
+      tags:
+      - Shifts
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: shift found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  startdate:
+                    type: string
+                  enddate:
+                    type: string
+                  user_id:
+                    type: string
+                  shop_id:
+                    type: string
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  startdate:
+                    type: string
+                  enddate:
+                    type: string
+                  user_id:
+                    type: string
+                  shop_id:
+                    type: string
+                required:
+                - id
+        '404':
+          description: shift not found
+        '406':
+          description: unsupported accept header
+  "/shops":
+    post:
+      summary: Creates a shop
+      tags:
+      - Shops
+      parameters: []
+      responses:
+        '201':
+          description: Shop created
+        '422':
+          description: invalid request
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                id:
+                  type: integer
+                name:
+                  type: string
+                description:
+                  type: string
+                user_ids:
+                  type: array
+                  items:
+                    type: integer
+              required:
+              - id
+              - name
+  "/shops/{id}":
+    get:
+      summary: Retrieves a shop
+      tags:
+      - Shops
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: shop found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  shifts:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  description:
+                    type: string
+                  shifts:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+        '404':
+          description: shop not found
+        '406':
+          description: unsupported accept header
   "/users":
     post:
       summary: Creates a user
