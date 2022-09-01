@@ -303,6 +303,13 @@ paths:
                     type: integer
               required:
               - name
+    get:
+      summary: List shops
+      tags:
+      - Shops
+      responses:
+        '201':
+          description: Shops list
   "/shops/{id}":
     get:
       summary: Retrieves a shop

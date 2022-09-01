@@ -10,6 +10,7 @@ namespace :database do
     Rake::Task["populate:seed_superuser"].invoke
     Rake::Task["populate:seed_user"].invoke
     Rake::Task["populate:seed_shop"].invoke
+    Rake::Task["populate:seed_shifts"].invoke
   end
 end
 
@@ -23,7 +24,7 @@ namespace :populate do
                     access_role_id: AccessRole.find_by_rid('superuser').id }])
   end
 
-  desc 'Setup default user'
+  desc 'Setup default users'
   task seed_user: :environment do
     User.create!([{ id: 2,
                     name: 'Pablo Diaz',
@@ -32,7 +33,16 @@ namespace :populate do
                     shop_id: 1,
                     phone: '0123-0102031',
                     job_type_id: JobType.find_by_code('server').id,
-                    access_role_id: AccessRole.find_by_rid('staff').id }])
+                    access_role_id: AccessRole.find_by_rid('staff').id },
+                    { id: 3,
+                    name: 'Kitahara Hikaru',
+                    email: 'hikaru.realperson@example.com',
+                    department: 'Kitchen',
+                    shop_id: 2,
+                    phone: '0723-0102031',
+                    job_type_id: JobType.find_by_code('cashier').id,
+                    access_role_id: AccessRole.find_by_rid('staff').id },
+                  ])
   end
 
   desc 'Setup access roles'
@@ -60,6 +70,32 @@ namespace :populate do
   task seed_shop: :environment do
     Shop.create!([{ id: 1,
                     name: 'Plastic Noodles',
-                    description: 'Popular local restaraunt serving tender and chewy noodles' }])
+                    description: 'Popular local restaraunt serving tender and chewy noodles' },
+                  { id: 2,
+                    name: 'Crunchy Crabs',
+                    description: 'Best seafood from Hokkaido' },
+                  { id: 3,
+                    name: "Tea Sea \"We Free\"",
+                    description: 'Drinks from Okinawa"' },
+                  ])
+  end
+
+  desc 'Setup default shifts'
+  task seed_shifts: :environment do
+    Shift.create!([{ id: 1,
+                    name: 'Blue Shift',
+                    description: 'Quick shift for the upcoming event',
+                    startdate: '2022-09-01T14:50:00.791+09:00',
+                    enddate: '2022-09-01T20:50:00.791+09:00',
+                    shop_id: 1,
+                    user_id: 2 },
+                  { id: 2,
+                    name: 'Green Shift',
+                    description: 'Backup shift',
+                    startdate: '2022-09-02T10:30:00.791+09:00',
+                    enddate: '2022-09-02T20:30:00.791+09:00',
+                    shop_id: 1,
+                    user_id: 3 },
+                  ])
   end
 end

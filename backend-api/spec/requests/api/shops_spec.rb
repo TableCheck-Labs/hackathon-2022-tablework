@@ -1,7 +1,7 @@
 require 'swagger_helper'
 
 RSpec.describe 'api/shops', type: :request do
-path '/shops' do
+    path '/shops' do
 
     post 'Creates a shop' do
         tags 'Shops'
@@ -27,6 +27,17 @@ path '/shops' do
         run_test!
         end
     end
+
+    get 'List shops' do
+        tags 'Shops'
+        consumes 'application/json'
+
+        response '201', 'Shops list' do
+        let(:shop) { { id: 1000, name: 'Yes! Udon', description: "Let's Udon!" } }
+        run_test!
+        end
+    end
+
     end
 
     path '/shops/{id}' do
