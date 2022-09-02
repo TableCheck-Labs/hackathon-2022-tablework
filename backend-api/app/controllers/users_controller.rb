@@ -2,6 +2,12 @@
 
 class UsersController < ApplicationController
   before_action :set_user, only: %i[show edit update destroy]
+  before_action :ensure_json_request, only: %i[show]
+
+  def ensure_json_request  
+    return if request.format == :json
+    render :nothing => true, :status => 406  
+  end 
 
   # GET /users
   def index

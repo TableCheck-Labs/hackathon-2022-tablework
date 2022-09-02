@@ -10,8 +10,8 @@ Rails.application.routes.draw do
   resources :access_roles
   resources :job_types
 
-  get 'shops/:id/staff' =>'shops#staff'
-  get 'shops/:id/shifts' =>'shops#shifts'
+  get 'shops/:id/staff' =>'shops#staff', :defaults => { :format => :json }
+  get 'shops/:id/shifts' =>'shops#shifts', :defaults => { :format => :json }
 
   get 'start' => 'start#index'
 
