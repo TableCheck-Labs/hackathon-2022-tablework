@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import styled from '@emotion/styled';
 import { Spacing } from '@tablecheck/tablekit-theme';
 
@@ -24,6 +25,7 @@ export const Cell = styled.div<{
   color?: string;
 }>`
   display: flex;
+  flex-shrink: 0;
   flex-direction: column;
   width: calc(100% / 7);
   justify-content: center;
@@ -31,7 +33,16 @@ export const Cell = styled.div<{
   padding: ${Spacing.L2} 0;
   border-right: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-  ${({ color }) => `background-color: ${color}`};
+  ${({ color }) =>
+    color &&
+    css`
+      background-color: ${color};
+      color: white;
+
+      span {
+        color: #aaa;
+      }
+    `};
 
   &:last-child {
     border-right: none;
@@ -47,6 +58,7 @@ export const StaffCell = styled(Cell)`
 export const Avatar = styled.div<{
   url: string;
 }>`
+  flex-shrink: 0;
   border-radius: 100%;
   background-image: ${({ url }) => `url('${url}')`};
   background-size: cover;
@@ -57,4 +69,10 @@ export const Avatar = styled.div<{
 
 export const AvatarWrapper = styled.div`
   display: flex;
+`;
+
+export const SubtleText = styled.span`
+  color: ${({ theme }) => theme.colors.textSubtle};
+  font-size: 14px;
+  line-height: 16px;
 `;
