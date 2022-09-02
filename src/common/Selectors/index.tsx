@@ -5,7 +5,6 @@ import { Moment } from 'moment';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
 
-import { AppContext } from 'contexts/AppContext';
 import { Flex } from 'layouts';
 import { Period, View } from 'types';
 
@@ -21,14 +20,16 @@ import {
 export function Selectors({
   currentDate,
   setCurrentDate,
-  setView
+  setView,
+  isAdmin
 }: {
   currentDate: Moment;
   setCurrentDate: (date: Moment) => void;
   setView: (view: View) => void;
+  isAdmin?: boolean;
 }): JSX.Element {
   const [t] = useTranslation();
-  const { isAdmin } = React.useContext(AppContext);
+  // const { isAdmin } = React.useContext(AppContext);
   const venueOptions = [{ label: 'My Restaurant', value: 'my-restaurant' }];
   const viewOptions = [
     {

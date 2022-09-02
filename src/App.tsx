@@ -6,7 +6,6 @@ import { BrowserRouter } from 'react-router-dom';
 import { useAsync } from 'react-use';
 
 import { AppThemeProvider } from 'common/Theme';
-import { AppProvider } from 'contexts/AppContext';
 import { getI18nextInstance, initI18n } from 'i18n';
 import { MainWrapper } from 'layouts';
 
@@ -23,11 +22,9 @@ export function App(): JSX.Element {
       <I18nextProvider i18n={i18next}>
         <AppThemeProvider isDarkMode={isDarkMode} setDarkMode={setDarkMode}>
           <BrowserRouter basename={CONFIG.baseName}>
-            <AppProvider>
-              <MainWrapper>
-                <Router isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
-              </MainWrapper>
-            </AppProvider>
+            <MainWrapper>
+              <Router isDarkMode={isDarkMode} setDarkMode={setDarkMode} />
+            </MainWrapper>
           </BrowserRouter>
         </AppThemeProvider>
       </I18nextProvider>

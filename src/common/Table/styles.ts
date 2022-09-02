@@ -5,7 +5,7 @@ import { Spacing } from '@tablecheck/tablekit-theme';
 export const TableWrapper = styled.div`
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-bottom: none;
-  margin-top: ${Spacing.L4};
+  margin: ${Spacing.L4} 0;
   border-radius: 8px;
   overflow: hidden;
 `;

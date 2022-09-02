@@ -7,6 +7,7 @@ import {
 } from '@tablecheck/tablekit-alert';
 import * as React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useLocation } from 'react-router-dom';
 
 import { handleError } from './errorHandler';
 import { AppContextState } from './types';
@@ -21,6 +22,7 @@ const contextDefaultValues: AppContextState = {
   error: null,
   isLoading: false,
   isAdmin: false,
+  isApiDisabled: false,
   updateError: () => {},
   setLoading: () => {},
   setAlertMessage: () => {},
@@ -37,6 +39,8 @@ export const AppProvider: React.FC = ({
   children?: React.ReactNode;
 }) => {
   const [t] = useTranslation();
+  const location = useLocation();
+  const isApiDisabled = location.search.includes('isApiDisabled');
   const [error, setError] = React.useState<string | null>(
     contextDefaultValues.error
   );
@@ -70,6 +74,7 @@ export const AppProvider: React.FC = ({
         updateError,
         isLoading,
         isAdmin,
+        isApiDisabled,
         setLoading,
         alertMessage,
         setAlertMessage,
