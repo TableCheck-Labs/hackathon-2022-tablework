@@ -4,7 +4,7 @@ json.shift @shop_shifts do |shift|
   json.startdate shift.startdate
   json.enddate shift.enddate
 
-  json.user do
+  json.users do
     json.id User.find(shift.user_id).id
     json.name User.find(shift.user_id).name
     json.photo_url User.find(shift.user_id).photo_url
