@@ -8,6 +8,7 @@ export const HomeWrapper = styled(Flex)`
   margin-top: ${Spacing.L8};
 
   a {
+    color: ${({ theme }) => theme.colors.text};
     text-decoration: none;
   }
 `;

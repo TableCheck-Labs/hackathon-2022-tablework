@@ -5,6 +5,7 @@ export type AppContextState = {
   error: string | null;
   isLoading: boolean;
   isAdmin: boolean;
+  isApiDisabled: boolean;
   updateError: (value: string) => void;
   setLoading: (value: boolean) => void;
   setAlertMessage: (value: string) => void;

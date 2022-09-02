@@ -1,6 +1,7 @@
 import styled from '@emotion/styled';
 import { Button } from '@tablecheck/tablekit-button';
 import { LanguageSelector as TKLanguageSelector } from '@tablecheck/tablekit-language-selector';
+import { Spinner } from '@tablecheck/tablekit-spinner';
 import { Spacing } from '@tablecheck/tablekit-theme';
 import { Link } from 'react-router-dom';
 
@@ -61,4 +62,8 @@ export const MenuButton = styled(Button)`
   @media (min-width: ${BREAKPOINTS.tablet}) {
     margin-left: ${Spacing.L4};
   }
+`;
+
+export const LoadingSpinner = styled(Spinner)`
+  margin-left: ${Spacing.L4};
 `;

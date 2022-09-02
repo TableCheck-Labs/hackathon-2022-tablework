@@ -20,6 +20,7 @@ import {
   DesktopOnlyItems,
   LangSelectorButton,
   LanguageSelectorWrapper,
+  LoadingSpinner,
   LogoFlex,
   LogoWording,
   LogoWrapper,
@@ -35,7 +36,7 @@ export function TopNav({
   isDarkMode: boolean;
   setDarkMode: (value: boolean) => void;
 }): JSX.Element | null {
-  const { isAdmin } = React.useContext(AppContext);
+  const { isAdmin, isLoading } = React.useContext(AppContext);
   const [isMenuOpen, setMenuOpen] = React.useState(false);
   const i18next = getI18nextInstance();
   const navigate = useNavigate();
@@ -64,6 +65,7 @@ export function TopNav({
             <LogoWording>{t('keywords.app_name')}</LogoWording>
           </LogoWrapper>
           <LogoWording>&gt; {isAdmin ? 'Admin mode' : 'User mode'}</LogoWording>
+          {isLoading && <LoadingSpinner />}
         </LogoFlex>
         <div style={{ display: 'flex' }}>
           <DesktopOnlyItems>

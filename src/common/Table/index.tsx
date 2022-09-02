@@ -4,10 +4,9 @@ import { Helmet } from 'react-helmet';
 import { useTranslation } from 'react-i18next';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-import { AppContext } from 'contexts/AppContext';
+import { AppRoute } from 'enums';
 import { View } from 'types';
 
-import { AppRoute } from '../../enums';
 import { Selectors } from '../Selectors';
 
 import { AdminShiftsView } from './Admin/ShiftsView';
@@ -16,9 +15,10 @@ import { Staff } from './User';
 import { Cell, TableHeader, TableWrapper } from './styles';
 
 export function Table(): JSX.Element {
-  const { isAdmin } = React.useContext(AppContext);
+  // const { isAdmin } = React.useContext(AppContext);
   const location = useLocation();
   const navigate = useNavigate();
+  const isAdmin = location.pathname.includes(AppRoute.Venue);
   const [t, { language }] = useTranslation();
   const [currentDate, setCurrentDate] = React.useState(moment());
   const [view, setView] = React.useState(View.Staff);
@@ -38,11 +38,11 @@ export function Table(): JSX.Element {
     setCurrentDate(moment());
   }, [language]);
 
-  React.useEffect(() => {
-    if (!isAdmin && location.pathname.includes(AppRoute.Venue)) {
-      navigate('/', { replace: true });
-    }
-  }, [isAdmin]);
+  // React.useEffect(() => {
+  //   if (!isAdmin && location.pathname.includes(AppRoute.Venue)) {
+  //     navigate('/', { replace: true });
+  //   }
+  // }, [isAdmin]);
 
   let content = <Staff days={days} />;
   if (isAdmin && view === View.Staff) {
@@ -58,6 +58,7 @@ export function Table(): JSX.Element {
         currentDate={currentDate}
         setCurrentDate={setCurrentDate}
         setView={setView}
+        isAdmin={isAdmin}
       />
       <TableWrapper>
         <TableHeader>

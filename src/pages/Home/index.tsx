@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import { AppContext } from 'contexts/AppContext';
 import { AppRoute } from 'enums';
@@ -9,10 +9,14 @@ import { HomeWrapper, UserButton } from './styles';
 
 export function Home(): JSX.Element {
   const { setIsAdmin } = React.useContext(AppContext);
+  const { search } = useLocation();
   return (
     <PageWrapper>
       <HomeWrapper>
-        <Link to={AppRoute.MySchedule} onClick={() => setIsAdmin(false)}>
+        <Link
+          to={`${AppRoute.User}/2${search}`}
+          onClick={() => setIsAdmin(false)}
+        >
           <UserButton>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +55,10 @@ export function Home(): JSX.Element {
           </UserButton>
         </Link>
 
-        <Link to={`${AppRoute.Venue}/2`} onClick={() => setIsAdmin(true)}>
+        <Link
+          to={`${AppRoute.Venue}/1${search}`}
+          onClick={() => setIsAdmin(true)}
+        >
           <UserButton>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -119,6 +126,20 @@ export function Home(): JSX.Element {
             </svg>
             <div>Admin mode</div>
           </UserButton>
+        </Link>
+      </HomeWrapper>
+      <HomeWrapper>
+        <Link
+          to={`${AppRoute.User}/2?isApiDisabled=true`}
+          onClick={() => setIsAdmin(false)}
+        >
+          User (without API)
+        </Link>
+        <Link
+          to={`${AppRoute.Venue}/1?isApiDisabled=true`}
+          onClick={() => setIsAdmin(true)}
+        >
+          Admin (without API)
         </Link>
       </HomeWrapper>
     </PageWrapper>

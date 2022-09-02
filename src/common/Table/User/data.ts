@@ -6,7 +6,8 @@ export const data = {
     {
       id: 1,
       name: 'Lux hotel',
-      photo: 'https://via.placeholder.com/80/0000FF/FFFFFF?Text=Lux%20hotel',
+      photo_url:
+        'https://via.placeholder.com/80/0000FF/FFFFFF?Text=Lux%20hotel',
       shifts: [
         {
           id: 1,
@@ -27,7 +28,7 @@ export const data = {
     {
       id: 2,
       name: 'Chicken Station',
-      photo:
+      photo_url:
         'https://via.placeholder.com/80/DD6688/FFFFFF?Text=Chicken%20Station',
       shifts: [
         {
@@ -47,9 +48,9 @@ export const data = {
       ]
     },
     {
-      id: 1,
+      id: 3,
       name: 'Delmonte',
-      photo: 'https://via.placeholder.com/80/303030/FFFFFF?Text=Delmonte',
+      photo_url: 'https://via.placeholder.com/80/303030/FFFFFF?Text=Delmonte',
       shifts: [
         {
           id: 1,
@@ -68,9 +69,9 @@ export const data = {
       ]
     },
     {
-      id: 1,
+      id: 4,
       name: 'Tintorera',
-      photo: 'https://via.placeholder.com/80/44DD99/FFFFFF?Text=Delmonte',
+      photo_url: 'https://via.placeholder.com/80/44DD99/FFFFFF?Text=Delmonte',
       shifts: [
         {
           id: 1,

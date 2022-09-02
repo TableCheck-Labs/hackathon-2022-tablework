@@ -3,5 +3,6 @@
   "logLevel": "error",
   "publicUri": "/* @echo PUBLIC_URL */",
   "baseName": "",
-  "cdnURL": "/static"
+  "cdnURL": "/static",
+  "apiURL": "https://tablework.vectorsigma.ru"
 }

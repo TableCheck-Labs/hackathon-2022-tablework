@@ -29,8 +29,8 @@ export function Router({
         }
       >
         <Route index element={<Home />} />
-        <Route path={AppRoute.MySchedule} element={<Venue />} />
-        <Route path={`${AppRoute.Venue}/:slug`} element={<Venue />} />
+        <Route path={`${AppRoute.User}/:id`} element={<Venue />} />
+        <Route path={`${AppRoute.Venue}/:id`} element={<Venue />} />
         <Route path={AppRoute.About} element={<About />} />
       </Route>
       <Route path="*" element={<Navigate to={`/${language}`} replace />} />
