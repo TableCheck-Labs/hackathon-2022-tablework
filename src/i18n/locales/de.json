@@ -29,7 +29,9 @@
     "day": "Tag",
     "week": "Woche",
     "month": "Monat",
-    "shift_view": "Ansicht verschieben",
-    "employee_view": "Mitarbeiteransicht"
+    "staff_view": "Personalansicht",
+    "shifts_view": "Schichtansicht",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

@@ -29,7 +29,9 @@
     "day": "วัน",
     "week": "สัปดาห์",
     "month": "เดือน",
-    "shift_view": "Shift View",
-    "employee_view": "พนักงานดู"
+    "staff_view": "พนักงานดู",
+    "shifts_view": "เปลี่ยนมุมมอง",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

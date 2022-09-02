@@ -29,7 +29,9 @@
     "day": "Hari",
     "week": "Pekan",
     "month": "Bulan",
-    "shift_view": "Pergeseran Tampilan",
-    "employee_view": "Tampilan Karyawan"
+    "staff_view": "Tampilan Staf",
+    "shifts_view": "Pergeseran Tampilan",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }

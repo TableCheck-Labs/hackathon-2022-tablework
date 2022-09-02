@@ -29,7 +29,9 @@
     "day": "Jour",
     "week": "La semaine",
     "month": "Mois",
-    "shift_view": "Décaler la vue",
-    "employee_view": "Vue Employé"
+    "staff_view": "Vue du personnel",
+    "shifts_view": "Affichage des quarts de travail",
+    "user_mode": "",
+    "admin_mode": ""
   }
 }
