@@ -2,9 +2,9 @@
 
 # Many to Many relation
 class Allocation < ApplicationRecord
-  # Shifts to Users relations
+  # Shops to Users relations
   # Implementing has_many :through association (join model)
-  # Shifts has many Users (and vice versa)
-  belongs_to :shift, optional: true
+  # Shops has many Users (and vice versa)
+  belongs_to :shop, optional: true
   belongs_to :user
 end

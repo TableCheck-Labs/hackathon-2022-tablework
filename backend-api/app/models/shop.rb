@@ -6,5 +6,6 @@ class Shop < ApplicationRecord
   paginates_per 20
 
   has_many :shifts
-  has_many :users
+  has_many :allocations
+  has_many :users, through: :allocations
 end

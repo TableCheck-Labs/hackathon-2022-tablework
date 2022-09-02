@@ -205,6 +205,8 @@ paths:
                   type: string
                 department:
                   type: string
+                color:
+                  type: string
                 startdate:
                   type: string
                 enddate:
@@ -253,6 +255,8 @@ paths:
                     type: string
                   department:
                     type: string
+                  color:
+                    type: string
                   startdate:
                     type: string
                   enddate:
@@ -274,6 +278,8 @@ paths:
                   description:
                     type: string
                   department:
+                    type: string
+                  color:
                     type: string
                   startdate:
                     type: string
@@ -431,6 +437,13 @@ paths:
               - name
               - email
               - access_role_id
+    get:
+      summary: List users
+      tags:
+      - Users
+      responses:
+        '201':
+          description: Users list
   "/users/{id}":
     get:
       summary: Retrieves a user

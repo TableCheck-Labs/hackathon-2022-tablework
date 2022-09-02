@@ -16,8 +16,6 @@ gem 'sdoc', '~> 2.4', group: :doc
 gem 'rdoc', '>= 5.0'
 gem 'sqlite3', '~> 1.4.4'
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 2.11'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.12', require: false
 
@@ -43,6 +41,7 @@ end
 gem 'rspec-rails', '~> 5.0'
 gem 'rswag'
 gem 'rack-cors'
+gem 'jbuilder'
 
 group :development do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

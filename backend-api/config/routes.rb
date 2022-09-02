@@ -10,7 +10,8 @@ Rails.application.routes.draw do
   resources :access_roles
   resources :job_types
 
-  get 'users/new'
+  get 'shops/:id/staff' =>'shops#staff'
+  get 'shops/:id/shifts' =>'shops#shifts'
 
   get 'start' => 'start#index'
 

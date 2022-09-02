@@ -10,12 +10,12 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   belongs_to :access_role, required: false
-  belongs_to :shop, required: false
+  #belongs_to :shop, required: false
   belongs_to :job_type, required: false
 
   has_many :shifts
-
-  paginates_per 10
+  has_many :allocations
+  has_many :shops, through: :allocations
 
   def self.all_except(user)
     where.not(id: user)

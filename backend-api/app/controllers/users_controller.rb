@@ -12,7 +12,8 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = User.find(params[:id])
-    render json: @user.to_json(:include => :shifts)
+    @user_shifts = Shift.all.where(:user_id => @user.id)
+    @user_shops = @user.shops
   end
 
   # POST /users

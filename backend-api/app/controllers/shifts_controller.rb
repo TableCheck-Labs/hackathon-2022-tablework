@@ -15,7 +15,6 @@ class ShiftsController < ApplicationController
   def show
     @shift = Shift.find(params[:id])
     render json: @shift
-    #@event.users.count
   end
 
   # POST /shifts
@@ -50,6 +49,6 @@ class ShiftsController < ApplicationController
   end
 
   def shift_params
-    params.require(:shift).permit(:name, :description, :shop_id, :department, :startdate, :enddate, :user_id)
+    params.require(:shift).permit(:name, :description, :shop_id, :department, :color, :startdate, :enddate, :user_id)
   end
 end

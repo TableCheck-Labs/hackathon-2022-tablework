@@ -42,6 +42,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "allocations", force: :cascade do |t|
+    t.integer "shop_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shop_id"], name: "index_allocations_on_shop_id"
+    t.index ["user_id"], name: "index_allocations_on_user_id"
+  end
+
   create_table "job_types", force: :cascade do |t|
     t.string "name"
     t.string "light_color"
@@ -59,6 +68,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.integer "shop_id"
     t.integer "user_id"
     t.string "department"
+    t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_shifts_on_shop_id"
@@ -68,6 +78,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
   create_table "shops", force: :cascade do |t|
     t.string "name"
     t.text "description"
+    t.string "photo_url"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "shifts_count", default: 0
@@ -82,12 +93,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "job_type_id"
-    t.integer "shop_id"
     t.integer "access_role_id"
     t.index ["access_role_id"], name: "index_users_on_access_role_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["job_type_id"], name: "index_users_on_job_type_id"
-    t.index ["shop_id"], name: "index_users_on_shop_id"
   end
 
   add_foreign_key "shifts", "shops"

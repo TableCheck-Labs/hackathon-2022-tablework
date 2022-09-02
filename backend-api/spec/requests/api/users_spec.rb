@@ -23,12 +23,6 @@ path '/users' do
         }
 
         response '201', 'User created' do
-#        examples 'application/json' => {
-#            id: 1,
-#            name: 'Hello world!',
-#            email: 'dukenuckum@example.com',
-#            access_role_id: 3
-#            }
         let(:user) { { id: 1000, name: 'Duck Nukem', email: 'dukenuckum@example.com', access_role_id: 3, shift_ids: [1] } }
         run_test!
         end
@@ -38,6 +32,17 @@ path '/users' do
         run_test!
         end
     end
+
+    get 'List users' do
+        tags 'Users'
+        consumes 'application/json'
+
+        response '201', 'Users list' do
+        let(:user) { { id: 1000, name: 'Duck Nukem', email: 'dukenuckum@example.com', access_role_id: 3 } }
+        run_test!
+        end
+    end
+
     end
 
     path '/users/{id}' do

@@ -15,6 +15,15 @@ class ShopsController < ApplicationController
     render json: @shop.to_json(:include => :shifts)
   end
 
+  def staff
+    @shop = Shop.find(params[:id])
+  end
+
+  def shifts
+    @shop = Shop.find(params[:id])
+    @shop_shifts = Shift.all.where(:shop_id => @shop.id)
+  end
+
   # POST /shops
   def create
     @shop = Shop.new(shop_params)
@@ -46,7 +55,7 @@ class ShopsController < ApplicationController
   end
 
   def shop_params
-    params.require(:shop).permit(:name, :description, user_ids: [])
+    params.require(:shop).permit(:name, :description, :photo_url, user_ids: [])
   end
 
 end
