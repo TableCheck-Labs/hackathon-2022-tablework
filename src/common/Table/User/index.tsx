@@ -53,7 +53,7 @@ export function Staff({ days }: { days: Moment[] }): JSX.Element {
                 </Cell>
               );
             }
-            return <Cell key={`${shop.id}-${day.date()}`} />;
+            return <Cell key={`${shop.id}-${day.date()}`}>-</Cell>;
           })}
         </TableRow>
       ))}

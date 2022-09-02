@@ -1,7 +1,7 @@
 import moment, { Moment } from 'moment';
 import * as React from 'react';
 
-import { Avatar, Cell, StaffCell, TableRow } from '../../styles';
+import { Avatar, Cell, StaffCell, SubtleText, TableRow } from '../../styles';
 
 import { data } from './data';
 
@@ -12,24 +12,27 @@ export function AdminStaffView({ days }: { days: Moment[] }): JSX.Element {
         <TableRow key={staff.id}>
           <StaffCell>
             <Avatar url={staff.photo} />
-            {staff.name}
+            <div>
+              <div>{staff.name}</div>
+              <SubtleText>{staff.jobType}</SubtleText>
+            </div>
           </StaffCell>
           {days.map((day) => {
-            const slotFound = staff.slots.find(
+            const shiftFound = staff.shifts?.find(
               (slot) => day.date() === moment(slot.startTime).date()
             );
 
-            if (slotFound) {
+            if (shiftFound) {
               return (
                 <Cell
-                  key={`${staff.id}-${slotFound.startTime}`}
-                  color={slotFound.color}
+                  key={`${staff.id}-${shiftFound.startTime}`}
+                  color={shiftFound.color}
                 >
                   <div>
-                    {moment(slotFound.startTime).format('hA')} -{' '}
-                    {moment(slotFound.endTime).format('hA')}
+                    {moment(shiftFound.startTime).format('hA')} -{' '}
+                    {moment(shiftFound.endTime).format('hA')}
                   </div>
-                  <span>{slotFound.jobType}</span>
+                  <SubtleText>{shiftFound.name}</SubtleText>
                 </Cell>
               );
             }
