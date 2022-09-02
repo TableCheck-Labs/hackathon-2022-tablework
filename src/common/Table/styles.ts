@@ -67,8 +67,13 @@ export const Avatar = styled.div<{
   margin: 0 ${Spacing.L4};
 `;
 
+export const GroupAvatar = styled(Avatar)`
+  margin: 0 -${Spacing.L6};
+`;
+
 export const AvatarWrapper = styled.div`
   display: flex;
+  justify-content: center;
 `;
 
 export const SubtleText = styled.span`
