@@ -1,5 +1,7 @@
 json.id @user.id
 json.name @user.name
+json.email @user.email
+json.address @user.address
 json.photo_url @user.photo_url
 
 json.shops @user.shops do |shop|

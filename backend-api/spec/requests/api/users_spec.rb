@@ -61,10 +61,7 @@ path '/users' do
                 address: { type: :string },
                 phone: { type: :string },
                 photo_url: { type: :string },
-                job_type_id: { type: :string },
-                shop_id: { type: :string },
-                access_role_id: { type: :integer },
-                shifts: { type: :array, items: { type: :object, items: { type: :string } } }
+                shops: { type: :array, items: { type: :object, items: { type: :string } } }
             },
             required: [ 'id' ]
 

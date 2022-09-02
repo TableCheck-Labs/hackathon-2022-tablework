@@ -396,6 +396,106 @@ paths:
           description: shop not found
         '406':
           description: unsupported accept header
+  "/shops/{id}/shifts":
+    get:
+      summary: Retrieves shifts from the shop
+      tags:
+      - Shops
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: shifts found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  startdate:
+                    type: string
+                  enddate:
+                    type: string
+                  user:
+                    type: object
+                    items:
+                      items:
+                        type: string
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: integer
+                  name:
+                    type: string
+                  startdate:
+                    type: string
+                  enddate:
+                    type: string
+                  user:
+                    type: object
+                    items:
+                      items:
+                        type: string
+                required:
+                - id
+        '404':
+          description: shop not found
+        '406':
+          description: unsupported accept header
+  "/shops/{id}/staff":
+    get:
+      summary: Retrieves staff (users) from the shop
+      tags:
+      - Shops
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: users found
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+            application/xml:
+              schema:
+                type: object
+                properties:
+                  users:
+                    type: array
+                    items:
+                      type: object
+                      items:
+                        type: string
+                required:
+                - id
+        '404':
+          description: shop not found
+        '406':
+          description: unsupported accept header
   "/users":
     post:
       summary: Creates a user
@@ -475,13 +575,7 @@ paths:
                     type: string
                   photo_url:
                     type: string
-                  job_type_id:
-                    type: string
-                  shop_id:
-                    type: string
-                  access_role_id:
-                    type: integer
-                  shifts:
+                  shops:
                     type: array
                     items:
                       type: object
@@ -505,13 +599,7 @@ paths:
                     type: string
                   photo_url:
                     type: string
-                  job_type_id:
-                    type: string
-                  shop_id:
-                    type: string
-                  access_role_id:
-                    type: integer
-                  shifts:
+                  shops:
                     type: array
                     items:
                       type: object
