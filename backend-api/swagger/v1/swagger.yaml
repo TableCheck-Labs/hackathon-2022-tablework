@@ -423,9 +423,10 @@ paths:
                     type: string
                   enddate:
                     type: string
-                  user:
-                    type: object
+                  users:
+                    type: array
                     items:
+                      type: object
                       items:
                         type: string
                 required:
@@ -442,9 +443,10 @@ paths:
                     type: string
                   enddate:
                     type: string
-                  user:
-                    type: object
+                  users:
+                    type: array
                     items:
+                      type: object
                       items:
                         type: string
                 required:
