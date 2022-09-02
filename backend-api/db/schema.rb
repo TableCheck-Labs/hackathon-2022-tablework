@@ -51,6 +51,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.index ["user_id"], name: "index_allocations_on_user_id"
   end
 
+  create_table "assignments", force: :cascade do |t|
+    t.integer "shift_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["shift_id"], name: "index_assignments_on_shift_id"
+    t.index ["user_id"], name: "index_assignments_on_user_id"
+  end
+
   create_table "job_types", force: :cascade do |t|
     t.string "name"
     t.string "light_color"
@@ -66,13 +75,11 @@ ActiveRecord::Schema[7.0].define(version: 2022_08_31_190411) do
     t.datetime "startdate"
     t.datetime "enddate"
     t.integer "shop_id"
-    t.integer "user_id"
     t.string "department"
     t.string "color"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["shop_id"], name: "index_shifts_on_shop_id"
-    t.index ["user_id"], name: "index_shifts_on_user_id"
   end
 
   create_table "shops", force: :cascade do |t|

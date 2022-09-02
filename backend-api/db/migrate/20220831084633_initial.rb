@@ -8,13 +8,11 @@ class Initial < ActiveRecord::Migration[7.0]
       t.datetime 'startdate'
       t.datetime 'enddate'
       t.integer 'shop_id'
-      t.integer 'user_id'
       t.string 'department'
       t.string 'color'
       t.datetime 'created_at', null: false
       t.datetime 'updated_at', null: false
       t.index ['shop_id'], name: 'index_shifts_on_shop_id'
-      t.index ['user_id'], name: 'index_shifts_on_user_id'
     end
 
     create_table 'shops', force: :cascade do |t|
@@ -32,6 +30,15 @@ class Initial < ActiveRecord::Migration[7.0]
       t.datetime 'updated_at', null: false
       t.index ["shop_id"], name: "index_allocations_on_shop_id"
       t.index ["user_id"], name: "index_allocations_on_user_id"
+    end
+
+    create_table 'assignments', force: :cascade do |t|
+      t.integer 'shift_id'
+      t.integer 'user_id'
+      t.datetime 'created_at', null: false
+      t.datetime 'updated_at', null: false
+      t.index ["shift_id"], name: "index_assignments_on_shift_id"
+      t.index ["user_id"], name: "index_assignments_on_user_id"
     end
 
     create_table 'users', force: :cascade do |t|

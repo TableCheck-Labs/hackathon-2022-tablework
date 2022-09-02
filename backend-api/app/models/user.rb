@@ -10,10 +10,11 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
 
   belongs_to :access_role, required: false
-  #belongs_to :shop, required: false
   belongs_to :job_type, required: false
 
-  has_many :shifts
+  has_many :assignments
+  has_many :shifts, through: :assignments
+
   has_many :allocations
   has_many :shops, through: :allocations
 
