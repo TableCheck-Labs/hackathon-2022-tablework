@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 
 import { AppContext } from 'contexts/AppContext';
 
-import { Avatar, AvatarWrapper, Cell, TableRow } from '../../styles';
+import { AvatarWrapper, Cell, GroupAvatar, TableRow } from '../../styles';
 
 import { data } from './data';
 
@@ -51,7 +51,7 @@ export function AdminShiftsView({ days }: { days: Moment[] }): JSX.Element {
                 <Cell key={`${shift.id}-${shift.startTime}`}>
                   <AvatarWrapper>
                     {shift.users.map((user) => (
-                      <Avatar key={user.id} url={user.photo_url} />
+                      <GroupAvatar key={user.id} url={user.photo_url} />
                     ))}
                   </AvatarWrapper>
                 </Cell>
