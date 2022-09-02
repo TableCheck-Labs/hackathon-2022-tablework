@@ -13,13 +13,13 @@ path '/shifts' do
             description: { type: :string },
             department: { type: :string },
             color: { type: :string },
-            startdate: { type: :string },
-            enddate: { type: :string },
+            startTime: { type: :string },
+            endTime: { type: :string },
             user_id: { type: :string },
             shop_id: { type: :string } 
         },
 
-        required: [ 'name', 'startdate', 'enddate', 'user_id', 'shop_id' ]
+        required: [ 'name', 'startTime', 'endTime', 'user_id', 'shop_id' ]
         }
 
         response '201', 'Shift created' do
@@ -60,8 +60,8 @@ path '/shifts' do
                 description: { type: :string },
                 department: { type: :string },
                 color: { type: :string },
-                startdate: { type: :string },
-                enddate: { type: :string },
+                startTime: { type: :string },
+                endTime: { type: :string },
                 user_id: { type: :string },
                 shop_id: { type: :string } 
             },

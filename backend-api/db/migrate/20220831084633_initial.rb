@@ -5,8 +5,8 @@ class Initial < ActiveRecord::Migration[7.0]
     create_table 'shifts', force: :cascade do |t|
       t.string 'name'
       t.text 'description'
-      t.datetime 'startdate'
-      t.datetime 'enddate'
+      t.datetime 'startTime'
+      t.datetime 'endTime'
       t.integer 'shop_id'
       t.string 'department'
       t.string 'color'

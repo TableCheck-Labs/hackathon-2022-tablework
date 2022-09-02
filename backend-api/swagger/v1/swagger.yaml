@@ -207,9 +207,9 @@ paths:
                   type: string
                 color:
                   type: string
-                startdate:
+                startTime:
                   type: string
-                enddate:
+                endTime:
                   type: string
                 user_id:
                   type: string
@@ -217,8 +217,8 @@ paths:
                   type: string
               required:
               - name
-              - startdate
-              - enddate
+              - startTime
+              - endTime
               - user_id
               - shop_id
     get:
@@ -257,9 +257,9 @@ paths:
                     type: string
                   color:
                     type: string
-                  startdate:
+                  startTime:
                     type: string
-                  enddate:
+                  endTime:
                     type: string
                   user_id:
                     type: string
@@ -281,9 +281,9 @@ paths:
                     type: string
                   color:
                     type: string
-                  startdate:
+                  startTime:
                     type: string
-                  enddate:
+                  endTime:
                     type: string
                   user_id:
                     type: string
@@ -419,9 +419,9 @@ paths:
                     type: integer
                   name:
                     type: string
-                  startdate:
+                  startTime:
                     type: string
-                  enddate:
+                  endTime:
                     type: string
                   users:
                     type: array
@@ -439,9 +439,9 @@ paths:
                     type: integer
                   name:
                     type: string
-                  startdate:
+                  startTime:
                     type: string
-                  enddate:
+                  endTime:
                     type: string
                   users:
                     type: array

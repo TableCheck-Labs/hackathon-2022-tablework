@@ -2,10 +2,10 @@
 
 module ShiftsHelper
   def upcoming_shifts
-    Shift.order('startdate DESC').where('"enddate" > ?', Time.now)
+    Shift.order('startTime DESC').where('"endTime" > ?', Time.now)
   end
 
   def completed_shifts
-    Shift.order('startdate DESC').where('"enddate" < ?', Time.now)
+    Shift.order('startTime DESC').where('"endTime" < ?', Time.now)
   end
 end

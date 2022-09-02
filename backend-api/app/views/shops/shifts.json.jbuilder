@@ -1,8 +1,8 @@
 json.shifts @shop_shifts do |shift|
   json.id shift.id
   json.name shift.name
-  json.startdate shift.startdate
-  json.enddate shift.enddate
+  json.startTime shift.startTime
+  json.endTime shift.endTime
 
   json.users shift.users do |user|
     json.id user.id

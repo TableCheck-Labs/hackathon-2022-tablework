@@ -86,8 +86,8 @@ RSpec.describe 'api/shops', type: :request do
                 properties: {
                     id: {type: :integer },
                     name: { type: :string, },
-                    startdate: { type: :string },
-                    enddate: { type: :string },
+                    startTime: { type: :string },
+                    endTime: { type: :string },
                     users: { type: :array, items: { type: :object, items: { type: :string } } },
                 },
                 required: [ 'id' ]

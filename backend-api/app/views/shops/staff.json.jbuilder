@@ -6,7 +6,7 @@ json.users @shop.users do |user|
   json.shifts user.shifts do |shift|
     json.id shift.id
     json.name shift.name
-    json.startdate shift.startdate
-    json.enddate shift.enddate
+    json.startTime shift.startTime
+    json.endTime shift.endTime
   end
 end

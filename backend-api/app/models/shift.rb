@@ -3,13 +3,13 @@
 class Shift < ApplicationRecord
   validates :name, presence: true, length: { minimum: 4, maximum: 50 }
   validates :shop_id, presence: true
-  validates :startdate, presence: true
+  validates :startTime, presence: true
 
   paginates_per 10
 
   has_many :assignments
   has_many :users, through: :assignments
-  
+
   belongs_to :shop, counter_cache: true
 
   def created_by
