@@ -1,4 +1,4 @@
-json.shift @shop_shifts do |shift|
+json.shifts @shop_shifts do |shift|
   json.id shift.id
   json.name shift.name
   json.startdate shift.startdate
